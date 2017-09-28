@@ -5,6 +5,7 @@ class Solution:
     def reverseBits(self, n):
         ans = 0
         for i in range(32):
+            # 取最后一位
             ans |= n & 1
             ans <<= 1
             n >>= 1
