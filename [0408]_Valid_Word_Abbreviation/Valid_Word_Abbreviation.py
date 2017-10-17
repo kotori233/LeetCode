@@ -12,6 +12,8 @@ class Solution(object):
         while i < len(abbr):
             tab = '0'
             while abbr[i].isdigit():
+                if abbr[i] == '0':
+                    return False
                 tab += abbr[i]
                 i += 1
             j += int(tab)
