@@ -1,6 +1,6 @@
 class Solution(object):
 
-    def isStrobogrammatic(self, n):
+    def findStrobogrammatic(self, n):
         """
         :type n: int
         :rtype: List[str]
