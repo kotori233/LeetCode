@@ -22,6 +22,8 @@ class Solution(object):
         for i in range(2, side):
             temp = set()
             for j in range(i // 2):
+                # j ： subgame number
+                # i - j - 2 : pre subgame sg-value
                 temp.add(sg[j] ^ sg[i - j - 2])
             count = 0
             while count in temp:
