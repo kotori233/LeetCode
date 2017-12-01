@@ -9,7 +9,7 @@ class Solution(object):
         self.visited = [False for i in range(n)]
 
         def dfs(node):
-            for i in sheet[node]:
+            for i in sheet.get(node, []):
                 if not self.visited[i]:
                     self.visited[i] = True
                     dfs(i)
