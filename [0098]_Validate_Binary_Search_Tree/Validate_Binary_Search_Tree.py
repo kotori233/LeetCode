@@ -19,7 +19,7 @@ class Solution(object):
             if root.left is not None:
                 if not inorder(root.left):
                     return False
-            if root.val <= self.temp:
+            if self.temp is not None and root.val <= self.temp:
                 return False
             self.temp = root.val
             if root.right is not None:
