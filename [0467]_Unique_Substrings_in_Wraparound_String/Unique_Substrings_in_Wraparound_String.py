@@ -13,5 +13,5 @@ class Solution(object):
                 count += 1
             else:
                 count = 1
-            sheet[p[i]] = max(sheet.get(p[i], 0), count)
+            sheet[p[i]] = max(count, sheet.get(p[i], 0))
         return sum(sheet.values())
