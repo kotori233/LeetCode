@@ -9,11 +9,14 @@ class Solution(object):
             if idx == n:
                 return True
             for i in range(4):
-                if filled[i] >= nums[idx]:
-                    filled[i] -= nums[idx]
-                    if dfs(idx + 1, filled):
-                        return True
-                    filled[i] += nums[idx]
+                if filled[i] < nums[idx]:
+                    continue
+                if idx < 4 and i > idx:
+                    break
+                filled[i] -= nums[idx]
+                if dfs(idx + 1, filled):
+                    return True
+                filled[i] += nums[idx]
             return False
 
         n = len(nums)
